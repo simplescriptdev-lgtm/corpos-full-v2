@@ -1,5 +1,4 @@
-FROM php:8.1-apache
+FROM mcr.microsoft.com/vscode/devcontainers/php:8.2
 
-RUN docker-php-ext-install mysqli pdo pdo_mysql
-
-COPY . /var/www/html/
+# Встановлюємо розширення для MySQL
+RUN docker-php-ext-install pdo pdo_mysql mysqli
