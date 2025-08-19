@@ -1,13 +1,9 @@
+
 {
-  "name": "Corpos Dev",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspace",
-  "postCreateCommand": "bash .devcontainer/postCreate.sh",
+  "name": "PHP Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "forwardPorts": [8080],
-  "customizations": {
-    "vscode": {
-      "extensions": ["ms-azuretools.vscode-docker", "xdebug.php-debug"]
-    }
-  }
+  "postCreateCommand": "composer install || true"
 }
