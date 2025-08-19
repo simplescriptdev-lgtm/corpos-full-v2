@@ -1,0 +1,1 @@
+<?php require __DIR__ . '/auth.php'; if($_SERVER['REQUEST_METHOD']==='POST') do_logout(); header('Location: /corpos-full-v2/index.php'); exit; 
